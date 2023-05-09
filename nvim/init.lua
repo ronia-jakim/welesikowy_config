@@ -1,0 +1,8 @@
+require "plugins"
+require "update"
+require "completion"
+require "settings"
+require "colors"
+--require "nvim-config"
+require "tex"
+require "mappings"
