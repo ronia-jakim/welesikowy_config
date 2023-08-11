@@ -18,11 +18,11 @@ exec --no-startup-id nm-applet ## wireless network
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && /home/maruda/.config/dunst/change_volume.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && /home/marudka/.config/sway/dunst_volume.sh && pactl set-sink-mute @DEFAULT_SINK@ off
 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && /home/maruda/.config/dunst/change_volume.sh
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && /home/marudka/.config/sway/dunst_volume.sh && pactl set-sink-mute @DEFAULT_SINK@ off
 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && /home/maruda/.config/dunst/change_volume.sh
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && /home/marudka/.config/sway/dunst_volume.sh
 
 exec --no-startup-id dunst
 
@@ -95,7 +95,7 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-exec_always --no-startup-id ~/.config/i3/gestures.sh
+# exec_always --no-startup-id ~/.config/i3/gestures.sh
 
 # focus the child container
 # bindsym $mod+d focus child
@@ -142,7 +142,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -196,8 +198,8 @@ client.background #000000
 
 
 # my attempt at doing brightness thing
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d 'amdgpu_bl0' set 1%- && ~/.config/dunst/change_brightness.sh
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d 'amdgpu_bl0' set 1%+ && ~/.config/dunst/change_brightness.sh
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d 'amdgpu_bl1' set 1%- && ~/.config/sway/dunst_backlight.sh
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d 'amdgpu_bl1' set 1%+ && ~/.config/sway/dunst_backlight.sh
 
 
 bindsym XF86KbdBrightnessDown exec --no-startup-id brightnessctl -d 'asus::kbd_backlight' set 0%
@@ -231,14 +233,13 @@ input type:keyboard {
 }
 
 # exec --no-startup-id swaybg -m fill -i ~/pictures/piesek.png
-exec --no-startup-id  ~/sunpaper/sunpaper.sh -d
+exec --no-startup-id ~/sunpaper/sunpaper.sh -d
+# && sleep 2 && ~/sunpaper/sunpaper.sh -d
 
-exec_always ~/.local/bin/autotiling
+exec autotiling
 
-# exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-# exec systemctl --user import-environment
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec systemctl --user import-environment
 
-exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
-# exec_always ~/.config/sway/cloock.sh
+bindgesture swipe:right workspace next
+bindgesture swipe:left workspace prev

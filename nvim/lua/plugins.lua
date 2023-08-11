@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lua'
 
+
   -- lsp for nvim config 
   --use "folke/neodev.nvim"
 
@@ -39,6 +40,10 @@ return require('packer').startup(function(use)
   -- Put this at the end after all plugins
   --
   use 'lervag/vimtex'
+
+  use 'nvim-treesitter/nvim-treesitter'
+  use 'p00f/nvim-ts-rainbow'
+
 
   if packer_bootstrap then
     require('packer').sync()
