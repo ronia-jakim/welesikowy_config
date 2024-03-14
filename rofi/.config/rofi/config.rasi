@@ -1,0 +1,30 @@
+//@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+
+configuration {
+	modi: "drun";
+	font: "Anonymous Pro 16";
+	display-drun: "󰄛 ";
+	show-icons: false;
+}
+
+window {
+	width: 1000px;
+	height: 450px;
+
+	padding: 10px 10px;
+}
+
+listview {
+	spacing: 5px;
+	margin: 0px;
+	border-radius: 2px;
+	margin: 5px;
+}
+
+element {
+	padding: 5px 10px;
+}
+
+element-icon {
+	margin: 8px;
+}@theme "/home/marudka/.local/share/rofi/themes/squared-everforest.rasi"
