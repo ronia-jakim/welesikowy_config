@@ -1,6 +1,6 @@
 # WELESIKOWY CONFIG
 
-some dotfiles for my laptops
+some dotfiles for my laptops mixed with stow magic
 
 hail weles
 
