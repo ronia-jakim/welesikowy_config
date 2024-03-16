@@ -12,13 +12,13 @@ return {
      'hrsh7th/cmp-nvim-lua'
 
   },
-  config = function()
+  config = function() 
 
     -- Add additional capabilities supported by nvim-cmp
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local lspconfig = require('lspconfig')
     -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-    local servers = { 'clangd', 'pyright', 'texlab' }
+    local servers = { 'clangd', 'pyright', 'texlab', 'julials', 'lua_ls'}
     for _, lsp in ipairs(servers) do
       lspconfig[lsp].setup {
         -- on_attach = my_custom_on_attach,
@@ -26,6 +26,7 @@ return {
       }
     end
 
+    require'lspconfig'.julials.setup{}
 
     -- luasnip setup
     local luasnip = require 'luasnip'
