@@ -2,7 +2,7 @@
     "height": 30, // Waybar height (to be removed for auto height)
     //"spacing": 4, // Gaps between modules (4px)
     //"modules-left": ["sway/workspaces", "custom/spotify", "custom/battery_management"],
-    "modules-left": ["sway/workspaces", "custom/spotify", "custom/battery_management"],
+    "modules-left": ["hyprland/workspaces", "custom/spotify", "custom/battery_management"],
     "modules-center": ["clock"],
     "modules-right": ["network", "bluetooth", "custom/sunpaper", "backlight", "pulseaudio", "battery", "custom/poweroff"],
     "clock": {
