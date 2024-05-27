@@ -1,0 +1,8 @@
+connections:
+  - alias: bazunie
+    driver: postgresql
+    proto: tcp
+    user: maruda
+    host: 127.0.0.1
+    dbName: maruda
+    port: 5432

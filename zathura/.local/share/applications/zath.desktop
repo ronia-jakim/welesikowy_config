@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec="/home/maruda/.config/zathura/zath.sh"
+Name=Zath
+X-Desktop-File-Install-Version=0.27
