@@ -9,8 +9,8 @@ return {
      'hrsh7th/cmp-buffer'  ,
      'hrsh7th/cmp-path',
      'hrsh7th/cmp-cmdline',
-     'hrsh7th/cmp-nvim-lua',
-     'nanotee/sqls.nvim'
+     'hrsh7th/cmp-nvim-lua'
+     -- 'nanotee/sqls.nvim'
 
   },
   config = function()
@@ -29,11 +29,11 @@ return {
 
     require'lspconfig'.julials.setup{}
 
-    require('lspconfig').sqls.setup{
-        on_attach = function(client, bufnr)
-            require('sqls').on_attach(client, bufnr)
-        end
-    }
+    -- require('lspconfig').sqls.setup{
+    --     on_attach = function(client, bufnr)
+    --         require('sqls').on_attach(client, bufnr)
+    --     end
+    -- }
 
 
 
