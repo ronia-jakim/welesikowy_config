@@ -32,6 +32,9 @@ function bazunie {
 
 print -P "%F{red} %f%F{magenta} %f%F{yellow} %f%F{green} %f%F{cyan} %f%F{blue} %f"
 
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+LANGUAGE=english
 
 # zathura colorthemes
 # source ~/.config/zathura/zathura-time-theme.sh
