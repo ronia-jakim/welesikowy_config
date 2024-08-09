@@ -45,7 +45,7 @@
         "tooltip": false
     },
     "custom/spotify": {
-        "exec": "spotifyctl -q status --format '  %artist% : %title%' --max-title-length 20 --max-artist-length 15",
+        "exec": "spotifyctl -q status --format '  %artist% : %title%' --max-title-length 40 --max-artist-length 40",
         "on-click": "spotifyctl -q playpause",
         "on-double-click": "spotifyctl -q next",
         "on-double-click-right": "spotifyctl -q previous",
