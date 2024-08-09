@@ -17,9 +17,12 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-icons": ["", "", "", "", ""]
+//        "format-charging": "{capacity}%  A",
+//        "format-plugged": "{capacity}% gb B ",
+        "format-icons": {
+          "default": ["󰁺 ", "󰁼", "󰁿 ", "󰂁 ", "󰁹 "], 
+          "charging": ["󰢜  ", "󰂇 ", "󰂉 ", "󰂊 ", "󰂅 "]
+          }
     },
     "battery#bat2": {
         "bat": "BAT2"
