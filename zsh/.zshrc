@@ -16,8 +16,9 @@ alias keycodes="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%
 
 # ~/tasks.sh
 export PATH=$PATH:/home/maruda/.spicetify
-alias ls='ls --color=auto '#-1'
+# alias ls='ls --color=auto' #-1'
 
+alias ls='ls --color=auto '
 # alias zabijcie='cd ~/uni-stuff/zima-22 && code .'
 
 function gituje {
