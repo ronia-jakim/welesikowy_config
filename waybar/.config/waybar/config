@@ -4,7 +4,7 @@
     //"modules-left": ["sway/workspaces", "custom/spotify", "custom/battery_management"],
     "modules-left": ["hyprland/workspaces", "custom/spotify", "custom/battery_management"],
     "modules-center": ["clock"],
-    "modules-right": ["network", "bluetooth", "custom/sunpaper", "backlight", "pulseaudio", "battery", "custom/poweroff"],
+    "modules-right": ["network", "bluetooth", "backlight", "pulseaudio", "battery", "custom/poweroff"],
     "clock": {
         "format": "{:%a %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
