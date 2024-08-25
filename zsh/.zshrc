@@ -38,4 +38,4 @@ LC_ALL=en_US.UTF-8
 LANGUAGE=english
 
 # zathura colorthemes
-# source ~/.config/zathura/zathura-time-theme.sh
+source ~/.config/zathura/zathura-time-theme.sh

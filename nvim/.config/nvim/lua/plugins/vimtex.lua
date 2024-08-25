@@ -15,7 +15,9 @@ return {
             \ ],
             \}
 
-      let g:vimtex_view_method='zathura'
+      " let g:vimtex_view_method='zathura'
+      let g:vimtex_view_general_viewer='~/.config/zathura/zath.sh'
+
 
       let g:Tex_MultipleCompileFormates='pds,bibtex,pdf'
       let g:tex_fold_enabled = 0
