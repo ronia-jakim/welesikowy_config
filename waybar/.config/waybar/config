@@ -75,7 +75,7 @@
         },
         "interval": 20,
         "tooltip-format": "{status}",
-        "on-click": "kitty bluetuith",
+        "on-click": "blueman-manager", //"kitty bluetuith",
         "on-click-right": "bluetoothctl power off",
         "on-double-click-right": "bluetoothctl power on"
     },
