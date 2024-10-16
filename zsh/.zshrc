@@ -39,3 +39,5 @@ LANGUAGE=english
 
 # zathura colorthemes
 source ~/.config/zathura/zathura-time-theme.sh
+
+alias icat="kitten icat"
