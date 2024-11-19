@@ -9,6 +9,4 @@ then
 else
   gsettings set org.gnome.desktop.interface gtk-theme "Everforest-Dark"
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-  gsettings set org.gnome.desktop.interface gtk-theme "Everforest-Light"
-  gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 fi
