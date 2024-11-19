@@ -1,16 +1,17 @@
 
 
 
-declare -r zathura_light="~/.config/zathura/light/zathurarc"
-declare -r zathura_dark="~/.config/zathura/dark/zathurarc"
+zathura_light="~/.config/zathura/light/zathurarc"
+zathura_dark="~/.config/zathura/dark/zathurarc"
 
 
-local theme=$(~/welesikowy_config/scripts/light-or-dark.sh)
+theme=$(~/welesikowy_config/scripts/light-or-dark.sh)
 
 
 if [[ $theme == *"light"* ]];
 then
-  cp $(zathura_light) ~/.config/zathura/
+  cp ~/.config/zathura/light/zathurarc ~/.config/zathura/zathurarc
+
 else
-  cp $(zathura_dark) ~/.config/zathura/
+  cp ~/.config/zathura/dark/zathurarc ~/.config/zathura/zathurarc
 fi

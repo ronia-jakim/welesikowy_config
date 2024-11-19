@@ -4,4 +4,6 @@
 
 
 
+
+~/.config/zathura/zathura-switch-theme-config.sh 
 ~/welesikowy_config/scripts/change_gtk_theme.sh
