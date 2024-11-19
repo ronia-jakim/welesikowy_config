@@ -1,0 +1,7 @@
+[Unit]
+Description=Switch theme script
+
+
+[Service]
+ExecStart=/bin/bash %h/theme-switch.sh
+Type=oneshot
