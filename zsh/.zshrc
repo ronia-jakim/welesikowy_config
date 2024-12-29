@@ -16,6 +16,7 @@ alias keycodes="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%
 
 # ~/tasks.sh
 export PATH=$PATH:/home/maruda/.spicetify
+export PATH="$PATH:/home/marudka/.dotnet/tools"
 # alias ls='ls --color=auto' #-1'
 
 alias ls='ls --color=auto '
