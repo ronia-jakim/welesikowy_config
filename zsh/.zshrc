@@ -2,6 +2,9 @@ PROMPT="%F{red}ฅ^•ﻌ•^ฅ%f %F{yellow}%n%f:%F{green}%1~/ %f%F{red}ᓚᘏ�
 
 alias dupa="nvim"
 
+alias windows="sudo grub-reboot 4"
+
+
 alias powersaver="powertop -c"
 
 alias screens="brightnessctl -l"
