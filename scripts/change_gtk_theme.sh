@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 theme=$(~/welesikowy_config/scripts/light-or-dark.sh)
 
 echo $theme
