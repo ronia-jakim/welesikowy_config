@@ -1,1 +1,1 @@
-alias windows="grub-reboot 4"
+alias windows="sudo grub-reboot 4"
