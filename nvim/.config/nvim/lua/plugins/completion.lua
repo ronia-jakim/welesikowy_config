@@ -20,13 +20,43 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local lspconfig = require('lspconfig')
     -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-    local servers = { 'clangd', 'pyright', 'texlab', 'julials', 'lua_ls', 'csharp_ls'}
+    local servers = { 'clangd', 'pyright', 'texlab', 'julials', 'lua_ls', 'csharp_ls' }
     for _, lsp in ipairs(servers) do
       lspconfig[lsp].setup {
         -- on_attach = my_custom_on_attach,
         capabilities = capabilities,
       }
     end
+
+    require('lspconfig').harper_ls.setup {
+      settings = {
+        ["harper-ls"] = {
+          userDictPath = "",
+          fileDictPath = "",
+          linters = {
+            SpellCheck = true,
+            SpelledNumbers = false,
+            AnA = true,
+            SentenceCapitalization = true,
+            UnclosedQuotes = true,
+            WrongQuotes = false,
+            LongSentences = true,
+            RepeatedWords = true,
+            Spaces = true,
+            Matcher = true,
+            CorrectNumberSuffix = true
+          },
+          codeActions = {
+            ForceStable = false
+          },
+          markdown = {
+            IgnoreLinkTitle = false
+          },
+          diagnosticSeverity = "hint",
+          isolateEnglish = false
+        }
+      }
+    }
 
     require'lspconfig'.julials.setup{}
 
