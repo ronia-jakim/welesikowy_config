@@ -30,4 +30,5 @@ local keymap = vim.api.nvim_set_keymap
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+vim.keymap.set("n", "<C-m>", function() vim.cmd [[ :Neotree ]] end)
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
