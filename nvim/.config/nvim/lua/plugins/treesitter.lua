@@ -4,6 +4,19 @@ return {
     'p00f/nvim-ts-rainbow'
   },
   config = function()
+    vim.filetype.add({
+      extension = { rasi = "rasi", rofi = "rasi", wofi = "rasi" },
+      filename = {
+        ["vifmrc"] = "vim",
+      },
+      pattern = {
+        [".*/waybar/config"] = "jsonc",
+        [".*/mako/config"] = "dosini",
+        [".*/kitty/.+%.conf"] = "kitty",
+        [".*/hypr/.+%.conf"] = "hyprlang",
+        ["%.env%.[%w_.-]+"] = "sh",
+      },
+    })
     require'nvim-treesitter.configs'.setup {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
       ensure_installed = { all },
