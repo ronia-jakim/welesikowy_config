@@ -9,11 +9,11 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,window";
+  modi: "drun,run,window,clipboard:~/.config/rofi/image_test.sh";
     show-icons:                 false;
-    display-drun:               "APPS";
-    display-run:                "RUN";
-    display-window:             "WINDOW";
+	   display-drun:               "APPS";
+	   display-run:                "RUN";
+	   display-window:             "WINDOW";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
