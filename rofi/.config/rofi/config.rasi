@@ -14,6 +14,7 @@ configuration {
 	   display-drun:               "APPS";
 	   display-run:                "RUN";
 	   display-window:             "WINDOW";
+     display-clipboard:          "COPY";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
