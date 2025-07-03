@@ -4,21 +4,4 @@ return {
     -- vim.keymap.set('n', '<leader>dd', function() require("duck").hatch("🦆", 10) end, {}) -- A pretty fast duck
     -- vim.keymap.set('n', '<leader>dc', function() require("duck").hatch("🐈", 3) end, {}) -- Quite a mellow cat
   end,
-  keys = {
-    {
-      "<leader>kd",
-      function()
-        require("duck").hatch("🦆", 10)
-      end,
-      desc = "kaczka dziwaczka",
-    },
-    {
-      "<leader>kc",
-      function()
-        require("duck").hatch("🐈", 3)
-      end,
-      desc = "kycia jest gruba",
-    },
-  },
-
 }

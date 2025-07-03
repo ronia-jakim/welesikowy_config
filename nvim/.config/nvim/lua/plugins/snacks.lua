@@ -19,13 +19,6 @@ return {
     -- statuscolumn = { enabled = true },
     -- words = { enabled = true },
   },
-  keys = {
-    -- Top Pickers & Explorer
-    { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
-   { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
-     { "<leader>g", function() Snacks.picker.git_grep() end, desc = "Find Git Files" },
-
-  },
 },
 
 }
