@@ -12,5 +12,16 @@ return {
   ---@type neotree.Config?
   opts = {
     -- fill any relevant options here
+    follow_current_file = {
+      enabled = true 
+    },
+    event_handlers = {
+      {
+        event = "file_opened", 
+        handler = function(file_path)
+          require("neo-tree.command").execute({ action = "show", toggle = false })
+        end
+      }
+    }
   },
 }

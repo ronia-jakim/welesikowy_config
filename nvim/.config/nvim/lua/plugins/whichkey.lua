@@ -35,6 +35,13 @@ return {
         vim.lsp.buf.code_action() 
       end, 
       desc = "code action"
+    }, 
+    {
+      "<C-m>", 
+      function() 
+        vim.cmd [[ :Neotree toggle ]] 
+      end, 
+      "toggle Neotree"
     }
   },
 }
