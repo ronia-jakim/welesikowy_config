@@ -6,14 +6,14 @@ return {
   end,
   keys = {
     {
-      "<leader>dd",
+      "<leader>kd",
       function()
         require("duck").hatch("🦆", 10)
       end,
       desc = "kaczka dziwaczka",
     },
     {
-      "<leader>dc",
+      "<leader>kc",
       function()
         require("duck").hatch("🐈", 3)
       end,
