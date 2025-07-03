@@ -1,4 +1,4 @@
-return {
+qeturn {
   "folke/which-key.nvim",
   event = "VeryLazy",
   opts = {
@@ -90,7 +90,10 @@ return {
           vim.cmd [[ :SearchBoxIncSearch ]]
         end, 
         desc = "search box",
-        icon = "󰍉"
+        icon = {
+          icon = "󰍉", 
+          color = "blue" 
+        }
       },
       {
         "<leader>sr", 
@@ -98,7 +101,21 @@ return {
           vim.cmd [[ :SearchBoxReplace ]]
         end, 
         desc = "search and replace box",
-        icon = ""
+        icon = {
+          icon = "", 
+          color = "purple" 
+        }
+      },
+      {
+        "<leader>sa", 
+        function() 
+          vim.cmd [[ :SearchBoxReplace confirm=menu ]]
+        end, 
+        desc = "confirm search and replace box",
+        icon = {
+          icon = "", 
+          color = "orange" 
+        }
       },
 
       -- DUCK AND CAT
