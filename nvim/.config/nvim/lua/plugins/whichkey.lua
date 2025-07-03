@@ -8,8 +8,9 @@ return {
 
   },
   config = function()
+    vim.keymap.set({'n', '<leader>d', vim.diagnostic.open_float, {desc= 'diagnostisc'}})
+    vim.keymap.set({'n', '<leader>la', vim.lsp.buf.code_action, {desc= 'code action'}})
     require("which-key").add({
-
       { "<leader>d", group = "kaczuszki i kotki" },
     })
   end,
