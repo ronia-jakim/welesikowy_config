@@ -17,6 +17,16 @@ return {
         desc = "Buffer Local Keymaps (which-key)",
       },
 
+      -- LSP 
+      {
+        '<leader>t', 
+        function ()
+          vim.lsp.buf.hover()
+        end, 
+        desc = "check type", 
+        icon = { icon = "󰼭", color = "azure" }
+      },
+
       -- FUZZY FINDER
       { "<leader>f", group = "fuzzy finder", icon={icon = "󰱼", color = "azure" } },
 
