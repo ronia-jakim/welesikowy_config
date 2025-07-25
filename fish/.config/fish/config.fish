@@ -1,4 +1,5 @@
 set -gx EDITOR nvim
+
 set -gx PATH /home/maruda/go/bin $PATH
 
 if status is-interactive
