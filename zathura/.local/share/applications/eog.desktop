@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=eog
+MimeType=image/png;
+Name=eog
+NoDisplay=true
+Type=Application
