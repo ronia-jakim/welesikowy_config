@@ -1,1 +1,4 @@
 ./nvim/.config/nvim/lazy-lock.json
+scripts/.config/systemd/user/darkman.service
+scripts/.config/systemd/user/graphical-session.target.wants/darkman.service
+scripts/.config/systemd/user/tray.target
