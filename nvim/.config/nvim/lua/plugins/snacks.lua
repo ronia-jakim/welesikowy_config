@@ -13,7 +13,7 @@ return {
     -- input = { enabled = true },
     picker = { 
       enabled = true, 
-      frontmatters = { 
+      formatters = { 
         file = { truncate = 160 } 
       } 
     },
