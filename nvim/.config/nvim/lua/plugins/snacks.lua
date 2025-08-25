@@ -11,7 +11,7 @@ return {
     -- explorer = { enabled = true },
     -- indent = { enabled = true },
     -- input = { enabled = true },
-    picker = { enabled = true },
+    picker = { enabled = true, file = { truncate = 160 } },
     -- notifier = { enabled = true },
     -- quickfile = { enabled = true },
     -- scope = { enabled = true },

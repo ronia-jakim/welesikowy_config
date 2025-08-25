@@ -29,7 +29,7 @@ return {
         function() 
           Snacks.picker.smart() 
         end, 
-        desc = "search files in current directory",
+        desc = "search for files in home directory, prioritize the most used ones",
         icon={ icon = "󰱼", color = "azure" } 
       },
 
@@ -38,7 +38,7 @@ return {
         function() 
           Snacks.picker.grep() 
         end, 
-        desc = "search in current file", 
+        desc = "search inside files in current directory", 
         icon={ icon = "󰍉", color = "azure" } 
       },
      { 
