@@ -1,6 +1,7 @@
 layout {
   gaps 0 
-  
+
+  always-center-single-column
   center-focused-column "never"
 
   preset-column-widths {
@@ -18,6 +19,7 @@ layout {
     width 2 
 
     active-gradient from="#A7C080" to="#DBBC7F" angle=60 
+    inactive-color "#384B55"
   }
 
   // shadow {
