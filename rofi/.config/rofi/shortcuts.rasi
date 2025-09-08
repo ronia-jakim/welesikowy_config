@@ -1,0 +1,143 @@
+/* ROUNDED THEME FOR ROFI */
+/* Author: Newman Sanchez (https://github.com/newmanls) */
+
+/* ROUNDED THEME FOR ROFI */
+/* Author: Newman Sanchez (https://github.com/newmanls) */
+
+* {
+    bg0:    #2b3339CC;   /* darkest background */
+    bg1:    #323c41;     /* background highlight */
+    bg2:    #3a454a80;   /* subtle overlay / popup bg */
+    bg3:    #a7c080F2;   /* green accent (selection, prompt border, etc.) */
+
+    fg0:    #d3c6aa;     /* main text */
+    fg1:    #e5d9c6;     /* lighter text */
+    fg2:    #9da9a0;     /* muted/placeholder */
+    fg3:    #7a8478;     /* comments, inactive */
+
+    font:   "Roboto 12";
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    location:       north;
+    y-offset:       calc(50% - 176px);
+    width:          560;
+    border-radius:  24px;
+
+    background-color:   @bg0;
+    
+}
+
+mainbox {
+    padding:    12px;
+    background-color: transparent;
+}
+
+inputbar {
+    background-color:   @bg1;
+    border-color:       @bg3;
+
+    border:         2px;
+    border-radius:  16px;
+
+    padding:    8px 16px;
+    spacing:    8px;
+    children:   [ prompt, entry ];
+}
+
+prompt {
+    text-color: @fg2;
+}
+
+entry {
+    placeholder:        "Search for shortcuts";
+    placeholder-color:  @fg3;
+    margin-left: 5px;
+    text-color: @bg3;
+}
+
+textbox {
+    padding:    8px 24px;
+}
+
+listview {
+    margin:     12px 0 0;
+    lines:      8;
+    columns:    1;
+
+    enabled:                     true;
+    columns:                     1;
+    lines:                       5;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    cursor:                      "default";
+
+    border: 0px;
+
+    border-radius: 10px;
+}
+
+
+element {
+    background-color: transparent;
+    text-color: @fg0;
+    padding:        8px 16px;
+    spacing:        8px;
+    border-radius:  0px;
+}
+
+element normal.normal {
+    background-color:            inherit;
+    text-color: inherit;
+}
+element normal.urgent {
+    background-color:            inherit;
+    text-color: inherit;
+}
+element normal.active {
+    background-color:            inherit;
+    text-color: inherit;
+}
+element.alternate.normal {
+    background-color:            inherit;
+    text-color: inherit;
+}
+element.alternate.urgent {
+    background-color:            inherit;
+    text-color: inherit;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg3;
+    text-color: @bg1;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+button {
+  background-color: transparent;
+}
+
+dummy {
+  background-color: red;
+}
+
+
