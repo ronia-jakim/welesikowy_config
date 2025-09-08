@@ -1,0 +1,15 @@
+󰇥 UTILITIES
+SUPER + L : rofi drun
+SUPER + V : rofi clipboard
+SUPER + H : display help
+SUPER + SHIFT + P : screenshot
+ 󰇥 PROGRAMS
+SUPER + C : firefox
+SUPER + P : pseudo
+SUPER + RETURN : terminal
+ 󰇥 HYPRLAND
+SUPER + J : change vertical-horizontal split
+SUPER + W : toggle waybar
+SUPER + ALT +   : resize window
+SUPER + Q : kill active
+SUPER + M : exit hyprland
