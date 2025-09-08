@@ -1,0 +1,25 @@
+input {
+  keyboard {
+    xkb {
+      layout "us,pl"
+      variant ",altgr-intl"
+      options "grp:alt_shift_toggle"
+    }
+  }
+
+  touchpad {
+    tap 
+    dwtp
+    scroll-method "two-finger"
+    // natural-scroll
+    accel-profile "adaptive"
+  }
+  
+  mouse {
+    natural-scroll
+    // accel-speed
+  }
+
+  trackpoint {
+  }
+}
