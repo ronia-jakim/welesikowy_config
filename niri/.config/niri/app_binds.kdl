@@ -1,0 +1,18 @@
+binds {
+  Mod+D hotkey-overlay-title="rofi" { spawn: "rofi -show drun -show-icons -config ~/.config/rofi/config_small.rasi"; }
+  Mod+L hotkey-overlay-title="hyprlock" { spawn: "hyprlock"; }
+  Mod+C hotkey-overlay-title="toggle waybar" { spawn-sh: "pkill waybar || ~/.config/waybar/launch.sh"; }
+
+  Mod+q repeat=false { close-window; }
+  
+  Mod+C hotkey-overlay-title="firefox" { spawn: "firefox"; }
+  Mod+Return hotkey-overlay-title="kitty" { spawn: "kitty"; }
+
+  Mod+M { quit; }
+
+
+  Mod+SHIFT+S { spawn-sh: " grim -g '$(slurp)' - | wl-copy "; }
+  Print { spawn-sh: " grim - | wl-copy "; }
+  Mod+SHIFT+P { spawn-sh: " grim -g '$(slurp)' - | swappy -f - "; }
+  Mod+SHIFT+Print { spawn-sh: " grim - | swappy -f - " }
+}
