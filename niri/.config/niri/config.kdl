@@ -1,0 +1,135 @@
+# Docs: https://github.com/YaLTeR/niri
+
+# ────────────────────────────── MONITORS ──────────────────────────────
+# Niri uses `output` instead of `monitor`
+outputs {
+    output "eDP-1" {
+        mode "1920x1200"
+        scale 1.0
+        position 0,0
+    }
+    output "HDMI-A-1" {
+        mode "1600x900"
+        scale 1.0
+        position 1920,0
+    }
+}
+
+# ────────────────────────────── AUTOSTART ──────────────────────────────
+# Niri uses `exec` blocks
+exec "kwalletd6"
+exec "/usr/lib/pam_kwallet_init"
+exec "systemctl --user start darkman.service"
+exec "libinput-gestures"
+exec "~/welesikowy_config/scripts/theme-switch.sh"
+exec "~/.config/hypr/random_wallpaper.sh"
+
+# Clipboard history daemon
+exec "wl-paste --type text --watch cliphist store"
+exec "wl-paste --type image --watch cliphist store"
+
+# ────────────────────────────── ENVIRONMENT VARIABLES ──────────────────────────────
+env "XCURSOR_SIZE" "24"
+env "QT_QPA_PLATFORMTHEME" "qt5ct"
+env "WLR_NO_HARDWARE_CURSORS" "1"
+
+# ────────────────────────────── INPUT ──────────────────────────────
+input {
+    keyboard {
+        layout "pl"
+    }
+    touchpad {
+        natural-scroll false
+    }
+    focus-follows-mouse true
+}
+
+# ────────────────────────────── APPEARANCE ──────────────────────────────
+appearance {
+    border {
+        width 2
+        active-color "#495156"
+        inactive-color "#1E2326"
+    }
+    gaps 0
+    corner-radius 0
+    animations false
+    shadows false
+}
+
+# ────────────────────────────── KEYBINDINGS ──────────────────────────────
+bind "Super+Return" { spawn "kitty" }
+bind "Super+Q" { close-window }
+bind "Super+M" { spawn "~/.config/hypr/rofi-exit.sh" }
+bind "Super+D" { spawn "rofi -show drun -show-icons -config ~/.config/rofi/config_small.rasi" }
+bind "Super+V" { spawn "rofi -show clipboard -show-icons -config ~/.config/rofi/config_clipboard.rasi" }
+bind "Super+C" { spawn "firefox" }
+bind "Super+L" { spawn "hyprlock" }
+bind "Super+W" { spawn "pkill waybar || ~/.config/waybar/launch.sh" }
+bind "Super+H" { spawn "rofi -dmenu -i -config ~/.config/rofi/shortcuts.rasi -p 'Shortcuts' -no-custom < ~/.config/hypr/hyprbindings.txt" }
+
+# ── Screenshots
+bind "Super+Shift+S" { spawn "grim -g \"$(slurp)\" - | wl-copy" }
+bind "Print" { spawn "grim - | wl-copy" }
+bind "Super+Shift+P" { spawn "grim -g \"$(slurp)\" - | swappy -f -" }
+bind "Super+Shift+Print" { spawn "grim - | swappy -f -" }
+
+# ── Workspaces
+# (Niri doesn’t number them the same way, but you can bind explicit indexes)
+bind "Super+1" { focus-workspace 1 }
+bind "Super+2" { focus-workspace 2 }
+bind "Super+3" { focus-workspace 3 }
+bind "Super+4" { focus-workspace 4 }
+bind "Super+5" { focus-workspace 5 }
+bind "Super+6" { focus-workspace 6 }
+bind "Super+7" { focus-workspace 7 }
+bind "Super+8" { focus-workspace 8 }
+bind "Super+9" { focus-workspace 9 }
+bind "Super+0" { focus-workspace 10 }
+
+bind "Super+Shift+1" { move-window-to-workspace 1 }
+bind "Super+Shift+2" { move-window-to-workspace 2 }
+bind "Super+Shift+3" { move-window-to-workspace 3 }
+bind "Super+Shift+4" { move-window-to-workspace 4 }
+bind "Super+Shift+5" { move-window-to-workspace 5 }
+bind "Super+Shift+6" { move-window-to-workspace 6 }
+bind "Super+Shift+7" { move-window-to-workspace 7 }
+bind "Super+Shift+8" { move-window-to-workspace 8 }
+bind "Super+Shift+9" { move-window-to-workspace 9 }
+bind "Super+Shift+0" { move-window-to-workspace 10 }
+
+# ── Focus movement
+bind "Super+Left" { focus-window left }
+bind "Super+Right" { focus-window right }
+bind "Super+Up" { focus-window up }
+bind "Super+Down" { focus-window down }
+
+# ── Move windows
+bind "Super+Shift+Left" { move-window left }
+bind "Super+Shift+Right" { move-window right }
+bind "Super+Shift+Up" { move-window up }
+bind "Super+Shift+Down" { move-window down }
+
+# ── Resize windows
+bind "Super+Alt+Right" { resize-window right 10 }
+bind "Super+Alt+Left" { resize-window left -10 }
+bind "Super+Alt+Up" { resize-window up 10 }
+bind "Super+Alt+Down" { resize-window down -10 }
+
+# ────────────────────────────── MEDIA KEYS ──────────────────────────────
+bind "XF86AudioPlay" { spawn "playerctl play-pause" }
+bind "XF86AudioPause" { spawn "playerctl play-pause" }
+bind "XF86AudioNext" { spawn "playerctl next" }
+bind "XF86AudioPrev" { spawn "playerctl previous" }
+
+bind "XF86AudioRaiseVolume" { spawn "pactl set-sink-volume @DEFAULT_SINK@ +2% && /home/marudka/.config/sway/dunst_volume.sh && pactl set-sink-mute @DEFAULT_SINK@ off" }
+bind "XF86AudioLowerVolume" { spawn "pactl set-sink-volume @DEFAULT_SINK@ -2% && /home/marudka/.config/sway/dunst_volume.sh && pactl set-sink-mute @DEFAULT_SINK@ off" }
+bind "XF86AudioMute" { spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle && /home/marudka/.config/sway/dunst_volume.sh" }
+
+bind "XF86MonBrightnessDown" { spawn "brightnessctl -d 'amdgpu_bl1' set 1%- && ~/.config/sway/dunst_backlight.sh" }
+bind "XF86MonBrightnessUp" { spawn "brightnessctl -d 'amdgpu_bl1' set 1%+ && ~/.config/sway/dunst_backlight.sh" }
+
+# ────────────────────────────── NOTES ──────────────────────────────
+# Hyprland-specific features (pseudotiling, window rules, gestures, etc.)
+# do not exist in Niri or are handled differently.
+# This config gives you equivalent keybinds, appearance, and autostart.
