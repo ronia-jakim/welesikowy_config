@@ -151,9 +151,7 @@ gestures {
 input {
   keyboard {
     xkb {
-      layout "us,pl"
-      variant ",altgr-intl"
-      options "grp:alt_shift_toggle"
+      layout "pl"
     }
   }
 
