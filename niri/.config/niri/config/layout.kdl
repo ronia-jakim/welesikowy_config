@@ -13,18 +13,11 @@ layout {
 
   focus-ring { 
     off
-    // width 2 
-    //
-    // active-color "#7FC8FF"
-    // inactive-color "#505050"
-
-    // active gradient from=?? to=?? angle=60
   }
   border {
     width 2 
 
-    active-color "#7FC8FF"
-    inactive-color "#505050"
+    active-gradient from="#A7C080" to="#DBBC7F" angle=60 
   }
 
   // shadow {
@@ -35,16 +28,19 @@ layout {
   }
 }
 
-hotkey-overlay {
-  // skip-at-startup
-}
+prefer-no-csd
 
 animations {
-  off
+  slowdown 2
 }
 
 window-rule {
   draw-border-with-background false
   clip-to-geometry true
+}
+
+window-rule {
+  match title="Firefox"
+  open-maximized true
 }
 

@@ -9,7 +9,7 @@ input {
 
   touchpad {
     tap 
-    dwtp
+    dwt
     scroll-method "two-finger"
     // natural-scroll
     accel-profile "adaptive"
@@ -22,4 +22,6 @@ input {
 
   trackpoint {
   }
+
+  focus-follows-mouse
 }

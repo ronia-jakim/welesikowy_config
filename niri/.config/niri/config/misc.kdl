@@ -1,0 +1,11 @@
+spawn-at-startup "wpaperd"
+
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 1000
+}
+
+hotkey-overlay {
+  skip-at-startup
+}
+
