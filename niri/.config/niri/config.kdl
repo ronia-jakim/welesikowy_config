@@ -10,7 +10,9 @@ binds {
     spawn-sh "rofi -show clipboard -show-icons -config ~/.config/rofi/config_clipboard.rasi"
   }
 
-  Mod+q repeat=false { close-window; }
+  Mod+Q repeat=false { close-window; }
+
+  Mod+O { toggle-overview; }
   
   Mod+C hotkey-overlay-title="firefox" { spawn "firefox"; }
   Mod+Return hotkey-overlay-title="kitty" { spawn "kitty"; }
