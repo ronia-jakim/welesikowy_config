@@ -198,7 +198,8 @@ layout {
   border {
     width 2 
 
-    active-gradient from="#A7C080" to="#DBBC7F" angle=60 
+    // active-gradient from="#A7C080" to="#DBBC7F" angle=60 
+    active-gradient from="#698241" to="#AB8232" angle=60 
     inactive-color "#384B55"
   }
 
