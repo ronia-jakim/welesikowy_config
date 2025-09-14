@@ -1,0 +1,25 @@
+input {
+  keyboard {
+    xkb {
+      layout "pl"
+    }
+  }
+
+  touchpad {
+    tap 
+    dwt
+    scroll-method "two-finger"
+    // natural-scroll
+    accel-profile "adaptive"
+  }
+  
+  mouse {
+    natural-scroll
+    // accel-speed
+  }
+
+  trackpoint {
+  }
+
+  focus-follows-mouse
+}

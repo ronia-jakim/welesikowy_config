@@ -1,0 +1,59 @@
+layout {
+  gaps 0 
+
+  always-center-single-column
+  center-focused-column "never"
+
+  background-color "A7C080"
+
+  preset-column-widths {
+    proportion 0.33333
+    proportion 0.5
+    proportion 0.66667
+  }
+
+  default-column-width { proportion 0.5; }
+
+  focus-ring { 
+    off
+  }
+  border {
+    width 2 
+
+    // active-gradient from="#A7C080" to="#DBBC7F" angle=60 
+    active-gradient from="#698241" to="#AB8232" angle=60 
+    inactive-color "#384B55"
+  }
+
+  // shadow {
+  // }
+
+  struts {
+    
+  }
+}
+
+prefer-no-csd
+
+animations {
+  slowdown 2
+}
+
+window-rule {
+  draw-border-with-background false
+  clip-to-geometry true
+}
+
+window-rule {
+  match title="Firefox"
+  open-maximized true
+}
+
+overview {
+  backdrop-color "A7C080"
+  workspace-shadow {
+    softness 20
+    spread 2
+  }
+}
+

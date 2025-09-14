@@ -1,0 +1,18 @@
+spawn-at-startup "wpaperd"
+
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 5000
+}
+
+hotkey-overlay {
+  skip-at-startup
+}
+
+
+spawn-sh-at-startup "swaybg -i ~/.config/niri/forest.png -m fill"
+layer-rule {
+    match namespace="^wallpaper$"
+
+    place-within-backdrop true
+}
