@@ -184,6 +184,8 @@ layout {
   always-center-single-column
   center-focused-column "never"
 
+  background-color "A7C080"
+
   preset-column-widths {
     proportion 0.33333
     proportion 0.5
@@ -227,17 +229,32 @@ window-rule {
   open-maximized true
 }
 
+overview {
+  backdrop-color "A7C080"
+  workspace-shadow {
+    softness 20
+    spread 2
+  }
+}
+
 spawn-at-startup "wpaperd"
 
 cursor {
     hide-when-typing
-    hide-after-inactive-ms 1000
+    hide-after-inactive-ms 5000
 }
 
 hotkey-overlay {
   skip-at-startup
 }
 
+
+spawn-sh-at-startup "swaybg -i /home/maruda/Pictures/forest.png -m fill"
+layer-rule {
+    match namespace="^wallpaper$"
+
+    place-within-backdrop true
+}
 output "eDP-1" {
   mode "1920x1200@60"
   scale 1
