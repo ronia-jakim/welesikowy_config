@@ -248,14 +248,14 @@ hotkey-overlay {
 }
 
 
-spawn-sh-at-startup "swaybg -i ~/.config/niri/forest.png -m fill"
+spawn-sh-at-startup "swaybg -i ~/.config/niri/forest.jpg -m fill"
 layer-rule {
     match namespace="^wallpaper$"
 
     place-within-backdrop true
 }
 output "eDP-2" {
-  off
+  // off
   mode "2880x1800@120"
   scale 1.25
   transform "normal"
@@ -264,7 +264,7 @@ output "eDP-2" {
 }
 
 output "eDP-1" {
-  off
+  // off
   mode "2880x1800@120"
   scale 1.25
   transform "normal"
@@ -273,6 +273,7 @@ output "eDP-1" {
 }
 
 output "DP-1" {
+  off
   mode "3440x1440@59.973"
   scale 1
   transform "normal"
