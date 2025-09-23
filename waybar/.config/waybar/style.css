@@ -44,7 +44,7 @@ window#waybar {
   color: red;
 }
 
-#pulseaudio, #network, #battery, #custom-sunpaper, #bluetooth, #custom-poweroff, #backlight {
+#pulseaudio, #network, #battery, #custom-sunpaper, #bluetooth, #custom-poweroff, #backlight, #custom-networkspeed {
   padding: 5 10px;
   background-color: @Bg2-color;
   color: @Fg-color;
