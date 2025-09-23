@@ -38,7 +38,7 @@
     },
     "custom/networkspeed" : {
       "exec": "~/.config/waybar/speed.sh",
-      "interval": 300,
+      "interval": 120,
       "tooltip": false
     },
     "pulseaudio": {
