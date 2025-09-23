@@ -3,5 +3,6 @@ Description=Switch theme script
 
 
 [Service]
-ExecStart=/bin/bash %h/theme-switch.sh
+; ExecStart=/bin/bash %h/theme-switch.sh
+ExecStart=/run/current-system/sw/bin/bash %h/theme-switch.sh
 Type=oneshot
