@@ -249,7 +249,7 @@ hotkey-overlay {
 }
 
 
-spawn-sh-at-startup "swaybg -i /home/maruda/Pictures/forest.png -m fill"
+spawn-sh-at-startup "swaybg -i /home/maruda/.config/niri/forest.png -m fill"
 layer-rule {
     match namespace="^wallpaper$"
 
