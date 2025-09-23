@@ -9,12 +9,3 @@ else
   echo "dupa"
 fi
 
-if [[ ! -f "$cachefile" ]] || [[ $(find "$cachefile" -mmin +2 2>/dev/null) ]]; then
-    (
-        testresult=$(speedtest-cli --secure)
-        download=$(awk '/Download:/ {print $2}' <<< "$testresult")
-        upload=$(awk '/Upload:/ {print $2}' <<< "$testresult")
-
-        echo "$download | $upload  " > "$cachefile"
-    ) &
-fi
