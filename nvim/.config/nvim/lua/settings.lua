@@ -3,6 +3,8 @@ vim.cmd([[
 
   filetype on
   filetype plugin on
+  highlight Normal ctermbg=Black
+  highlight NonText ctermbg=Black
 ]])
 
 local options ={
