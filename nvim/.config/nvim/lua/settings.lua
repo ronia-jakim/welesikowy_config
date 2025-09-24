@@ -24,6 +24,9 @@ vim.cmd([[
 --   end,
 -- })
 
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#fdf6e3" })      -- main buffer
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#fdf6e3" }) -- floating windows
+
 local options ={
   backup = false,
   clipboard = 'unnamedplus',
