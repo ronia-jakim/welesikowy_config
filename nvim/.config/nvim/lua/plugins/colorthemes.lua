@@ -18,5 +18,4 @@ return {
         vim.o.background = "light"
       end
 	end
-
 }

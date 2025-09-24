@@ -3,9 +3,26 @@ vim.cmd([[
 
   filetype on
   filetype plugin on
-  highlight Normal ctermbg=Black
-  highlight NonText ctermbg=Black
+  " highlight Normal ctermbg=Black
+  " highlight NonText ctermbg=Black
+  " highlight Normal guibg=#1e1e1e
+  " highlight NonText guibg=#1e1e1e
 ]])
+
+-- Ensure Neovim background is always set after colorscheme loads
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   callback = function()
+--     -- Dark theme
+--     if vim.o.background == "dark" then
+--       vim.api.nvim_set_hl(0, "Normal",      { bg = "#2d353b" })
+--       vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#2d353b" })
+--     -- Light theme
+--     else
+--       vim.api.nvim_set_hl(0, "Normal",      { bg = "#fdf6e3" })
+--       vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#fdf6e3" })
+--     end
+--   end,
+-- })
 
 local options ={
   backup = false,
