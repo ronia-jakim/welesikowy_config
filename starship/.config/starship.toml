@@ -2,6 +2,13 @@
 default = 'unknown user'
 format = "[$env_value](bold yellow)[ ᓚᘏᗢ ](bold red)"
 
+[nix_shell]
+# Format for nix-shell prompt
+format = "[$symbol$impure_msg$name](bold blue) "
+# Show impure/pure distinction
+impure_msg = "impure"
+pure_msg = "pure"
+symbol = " "
 
 [aws]
 symbol = "  "
@@ -87,9 +94,6 @@ symbol = "󰔷 "
 
 [nim]
 symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
 
 [nodejs]
 symbol = " "
