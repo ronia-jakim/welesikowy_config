@@ -1,4 +1,7 @@
-spawn-at-startup "wpaperd"
+// spawn-at-startup "wpaperd"
+
+spawn-sh-at-startup "swww-daemon"
+spawn-sh-at-startup "swww img ~/Pictures/wallpapers/tyrus.png"
 
 cursor {
     hide-when-typing
@@ -16,3 +19,7 @@ layer-rule {
 
     place-within-backdrop true
 }
+
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+

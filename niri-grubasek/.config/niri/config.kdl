@@ -236,7 +236,15 @@ overview {
   }
 }
 
-spawn-at-startup "wpaperd"
+window-rule {
+  match title="Picture-in-Picture"
+  open-floating true
+}
+
+// spawn-at-startup "wpaperd"
+
+spawn-sh-at-startup "swww-daemon"
+spawn-sh-at-startup "swww img ~/Pictures/wallpapers/tyrus.png"
 
 cursor {
     hide-when-typing
@@ -254,8 +262,12 @@ layer-rule {
 
     place-within-backdrop true
 }
+
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+
 output "eDP-2" {
-  // off
+  off
   mode "2880x1800@120"
   scale 1.25
   transform "normal"
@@ -264,7 +276,7 @@ output "eDP-2" {
 }
 
 output "eDP-1" {
-  // off
+  off
   mode "2880x1800@120"
   scale 1.25
   transform "normal"
@@ -273,7 +285,7 @@ output "eDP-1" {
 }
 
 output "DP-1" {
-  off
+  // off
   mode "3440x1440@59.973"
   scale 1
   transform "normal"
