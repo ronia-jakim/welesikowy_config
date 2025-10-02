@@ -56,6 +56,19 @@ binds {
   XF86MonBrightnessDown allow-when-locked=true { 
     spawn "brightnessctl" "--class=backlight" "set" "2%-"; 
   }
+  
+  XF86AudioPlay {
+    spawn-sh "playerctl play-pause";
+  }
+  XF86AudioPause {
+    spawn-sh "playerctl play-pause";
+  }
+  XF86AudioNext {
+    spawn-sh "playerctl next";
+  }
+  XF86AudioPrev {
+    spawn-sh "playerctl previous";
+  }
 
 
 
@@ -239,6 +252,11 @@ overview {
 window-rule {
   match title="Picture-in-Picture"
   open-floating true
+  min-width 190
+  min-height 60
+
+  max-width 500
+  max-height 500
 }
 
 // spawn-at-startup "wpaperd"

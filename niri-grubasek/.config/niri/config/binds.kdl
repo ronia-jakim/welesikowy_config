@@ -56,6 +56,19 @@ binds {
   XF86MonBrightnessDown allow-when-locked=true { 
     spawn "brightnessctl" "--class=backlight" "set" "2%-"; 
   }
+  
+  XF86AudioPlay {
+    spawn-sh "playerctl play-pause";
+  }
+  XF86AudioPause {
+    spawn-sh "playerctl play-pause";
+  }
+  XF86AudioNext {
+    spawn-sh "playerctl next";
+  }
+  XF86AudioPrev {
+    spawn-sh "playerctl previous";
+  }
 
 
 
