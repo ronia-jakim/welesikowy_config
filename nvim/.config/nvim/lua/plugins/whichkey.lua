@@ -142,6 +142,14 @@ return {
         desc = "kycia jest gruba", 
         icon = { icon = "", color = "yellow" }
       },
+
+      -- nawiasy {} wokół zaznaczonego tekstu
+      {
+        "<leader>q", 
+        "c{}<Esc>P", 
+        desc = "dodaj nawiasy", 
+        mode="v" 
+      }
     
     })
   end,
