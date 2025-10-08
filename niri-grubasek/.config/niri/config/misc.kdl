@@ -23,3 +23,5 @@ layer-rule {
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
+spawn-sh-at-startup "dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY"
+
