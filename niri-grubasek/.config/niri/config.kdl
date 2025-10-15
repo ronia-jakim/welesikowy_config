@@ -281,10 +281,21 @@ layer-rule {
     place-within-backdrop true
 }
 
+layer-rule {
+  match namespace="waybar"
+  place-within-backdrop true
+}
+
+// layer-shell {
+//   match namespace="waybar"
+//   allow-on-overview true
+//   allow-top-layer true
+// }
+
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
-spawn-sh-at-startup "export DISPLAY=:0 XAUTHORITY=$HOME/.Xauthority WAYLAND_DISPLAY=wayland-0 && dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY"
+// spawn-sh-at-startup "export DISPLAY=:0 XAUTHORITY=$HOME/.Xauthority WAYLAND_DISPLAY=wayland-0 && dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY"
 
 output "eDP-2" {
   off

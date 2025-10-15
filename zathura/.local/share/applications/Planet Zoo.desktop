@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Planet Zoo
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/703080
-Icon=steam_icon_703080
-Terminal=false
-Type=Application
-Categories=Game;
