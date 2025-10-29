@@ -57,6 +57,19 @@ binds {
     spawn "brightnessctl" "--class=backlight" "set" "2%-"; 
   }
 
+  XF86AudioPlay allow-when-locked=true {
+    spawn-sh "playerctl play-pause"
+  }
+  XF86AudioPause allow-when-locked=true {
+    spawn-sh "playerctl play-pause"
+  }
+  XF86AudioNext {
+    spawn-sh "playerctl next"
+  }
+  XF86AudioPrev {
+    spawn-sh "playerctl previous"
+  }
+
 
 
   Mod+Shift+F hotkey-overlay-title="make active window fullscreen" { fullscreen-window; }
@@ -236,6 +249,17 @@ overview {
     spread 2
   }
 }
+
+window-rule {
+  match title="Picture-in-Picture"
+  open-floating true
+  min-width 160
+  min-height 90
+
+  max-width 1600
+  max-height 900
+}
+
 
 spawn-at-startup "wpaperd"
 

@@ -57,6 +57,19 @@ binds {
     spawn "brightnessctl" "--class=backlight" "set" "2%-"; 
   }
 
+  XF86AudioPlay allow-when-locked=true {
+    spawn-sh "playerctl play-pause"
+  }
+  XF86AudioPause allow-when-locked=true {
+    spawn-sh "playerctl play-pause"
+  }
+  XF86AudioNext {
+    spawn-sh "playerctl next"
+  }
+  XF86AudioPrev {
+    spawn-sh "playerctl previous"
+  }
+
 
 
   Mod+Shift+F hotkey-overlay-title="make active window fullscreen" { fullscreen-window; }

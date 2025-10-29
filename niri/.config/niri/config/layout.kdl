@@ -57,3 +57,14 @@ overview {
   }
 }
 
+window-rule {
+  match title="Picture-in-Picture"
+  open-floating true
+  min-width 160
+  min-height 90
+
+  max-width 1600
+  max-height 900
+}
+
+
