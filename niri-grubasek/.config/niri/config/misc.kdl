@@ -3,6 +3,9 @@
 spawn-sh-at-startup "swww-daemon"
 spawn-sh-at-startup "swww img ~/Pictures/wallpapers/tyrus.png"
 
+spawn-sh-at-startup "kwalletd6"
+spawn-sh-at-startup "/usr/lib/pam_kwallet_init"
+
 cursor {
     hide-when-typing
     hide-after-inactive-ms 5000
