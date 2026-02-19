@@ -23,6 +23,13 @@ binds {
 
   Mod+H { show-hotkey-overlay; }
 
+  Mod+F2 {
+    spawn-sh "ddcutil -b 8 setvcp 10 + 2 "
+  }
+  Mod+F1 {
+    spawn-sh "ddcutil -b 8 setvcp 10 - 2 "
+  }
+
 
   Mod+SHIFT+S { 
     spawn-sh " grim -g \"$(slurp)\" - | wl-copy "; 
