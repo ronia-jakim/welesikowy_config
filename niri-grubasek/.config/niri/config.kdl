@@ -14,7 +14,8 @@ binds {
 
   Mod+O { toggle-overview; }
   
-  Mod+C hotkey-overlay-title="firefox" { spawn "firefox"; }
+  Mod+C hotkey-overlay-title="firefox" { spawn "firefox"; } 
+  // { spawn-sh "~/.config/niri/nicer-firefox.sh"; }
   Mod+Return hotkey-overlay-title="kitty" { spawn "kitty"; }
 
   Mod+M { 
@@ -243,10 +244,10 @@ window-rule {
   clip-to-geometry true
 }
 
-window-rule {
-  match title="Firefox"
-  open-maximized true
-}
+// window-rule {
+//   match title="Firefox"
+//   open-maximized true
+// }
 
 overview {
   backdrop-color "A7C080"
@@ -270,6 +271,9 @@ window-rule {
 
 spawn-sh-at-startup "swww-daemon"
 spawn-sh-at-startup "swww img ~/Pictures/wallpapers/tyrus.png"
+
+spawn-sh-at-startup "kwalletd6"
+spawn-sh-at-startup "/usr/lib/pam_kwallet_init"
 
 cursor {
     hide-when-typing

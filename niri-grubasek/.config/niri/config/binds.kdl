@@ -14,7 +14,8 @@ binds {
 
   Mod+O { toggle-overview; }
   
-  Mod+C hotkey-overlay-title="firefox" { spawn "firefox"; }
+  Mod+C hotkey-overlay-title="firefox" { spawn "firefox"; } 
+  // { spawn-sh "~/.config/niri/nicer-firefox.sh"; }
   Mod+Return hotkey-overlay-title="kitty" { spawn "kitty"; }
 
   Mod+M { 

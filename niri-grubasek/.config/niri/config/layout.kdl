@@ -44,10 +44,10 @@ window-rule {
   clip-to-geometry true
 }
 
-window-rule {
-  match title="Firefox"
-  open-maximized true
-}
+// window-rule {
+//   match title="Firefox"
+//   open-maximized true
+// }
 
 overview {
   backdrop-color "A7C080"
